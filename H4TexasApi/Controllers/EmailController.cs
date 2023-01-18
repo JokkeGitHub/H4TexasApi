@@ -12,20 +12,6 @@ namespace H4TexasApi.Controllers
         [Route("sendemail")]
         public IActionResult SendEmail()
         {
-            /*
-            var email = new MimeMessage();
-            email.From.Add(MailboxAddress.Parse("jokkesdummymail@gmail.com"));
-            email.To.Add(MailboxAddress.Parse("joac3146@zbc.dk"));
-            email.Subject = "Test Email Subject";
-            email.Body = new TextPart(TextFormat.Html) { Text = body };
-
-            using var smtp = new SmtpClient();
-            smtp.Connect("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
-            smtp.Authenticate("jokkesdummymail@gmail.com", "annkmqtqqxvalncn");
-            smtp.Send(email);
-            smtp.Disconnect(true);
-            */
-
             var email = new MailMessage();
             email.From = new MailAddress("jokkesdummymail@gmail.com");
             email.To.Add("joac3146@zbc.dk");
